@@ -20,7 +20,7 @@ public class Estado implements Comparable<Estado>, Comparator<Estado> {
 
 	private final Puzzle puzzle;
 	private final int valor;
-	private boolean oredenadaL = false;
+	private boolean ordenadaL = false;
 
 	private Queue<DIRECCION> path = new LinkedList<DIRECCION>();
 
@@ -59,7 +59,7 @@ public class Estado implements Comparable<Estado>, Comparator<Estado> {
 				} 
 				
 				if(penalizacion==1){
-					oredenadaL = true;
+					ordenadaL = true;
 				}
 
 				int filaEsperada = (valorCelda / 4);
@@ -184,7 +184,7 @@ public class Estado implements Comparable<Estado>, Comparator<Estado> {
 	}
 	
 	public boolean getLOrdenada(){
-		return this.oredenadaL;
+		return this.ordenadaL;
 	}
 
 	public void imprimir() {
